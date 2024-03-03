@@ -47,3 +47,8 @@ $ docker run -d --name myfastapicontainer -p 80:80 fastapi-image
 Host in Dockerfile must be:
 
 `host: 0.0.0.0`: "placeholder", it tells a server to listen for and accept connections from any IP address ("all IPv4 addresses on the local machine").
+
+Adding volume.
+```console
+$ docker run --name fastapi-container -p 80:80 -d -v $(pwd):/code fastapi-image
+```
